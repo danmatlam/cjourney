@@ -1,0 +1,68 @@
+:root {
+  /* Light Theme */
+  --light-app-main: #F2F2F7;
+  --light-app-contrast: #000000;
+  --light-fore-main: #FFFFFF;
+  --light-fore-contrast: #1D1D1F;
+  --light-primary-main: #FA2D48;
+  --light-primary-contrast: #FFFFFF;
+  --light-secondary-main: #000000;
+  --light-secondary-contrast: #FFFFFF;
+  --light-info-main: #0A84FF;
+  --light-info-contrast: #FFFFFF;
+  --light-success-main: #2FCF57;
+  --light-success-contrast: #FFFFFF;
+  --light-error-main: #FA2D48;
+  --light-error-contrast: #FFFFFF;
+
+  /* Dark Theme */
+  --dark-app-main: #0B132B;
+  --dark-app-contrast: #ffffff;
+  --dark-fore-main: #000000;
+  --dark-fore-contrast: #F6F8FA;
+  --dark-primary-main: #5aeecb;
+  --dark-primary-contrast: #0a0a0a;
+  --dark-secondary-main: #000000;
+  --dark-secondary-contrast: #FFFFFF;
+  --dark-info-main: #0A84FF;
+  --dark-info-contrast: #FFFFFF;
+  --dark-success-main: #2FCF57;
+  --dark-success-contrast: #FFFFFF;
+  --dark-error-main: #FA2D48;
+  --dark-error-contrast: #FFFFFF;
+
+}
+
+.light-theme {
+  --app-main: var(--light-app-main);
+  --app-contrast: var(--light-app-contrast);
+  --fore-main: var(--light-fore-main);
+  --fore-contrast: var(--light-fore-contrast);
+  --primary-main: var(--light-primary-main);
+  --primary-contrast: var(--light-primary-contrast);
+  --secondary-main: var(--light-secondary-main);
+  --secondary-contrast: var(--light-secondary-contrast);
+  --info-main: var(--light-info-main);
+  --info-contrast: var(--light-info-contrast);
+  --success-main: var(--light-success-main);
+  --success-contrast: var(--light-success-contrast);
+  --error-main: var(--light-error-main);
+  --error-contrast: var(--light-error-contrast);
+}
+
+.dark-theme {
+  --app-main: var(--dark-app-main);
+  --app-contrast: var(--dark-app-contrast);
+  --fore-main: var(--dark-fore-main);
+  --fore-contrast: var(--dark-fore-contrast);
+  --primary-main: var(--dark-primary-main);
+  --primary-contrast: var(--dark-primary-contrast);
+  --secondary-main: var(--dark-secondary-main);
+  --secondary-contrast: var(--dark-secondary-contrast);
+  --info-main: var(--dark-info-main);
+  --info-contrast: var(--dark-info-contrast);
+  --success-main: var(--dark-success-main);
+  --success-contrast: var(--dark-success-contrast);
+  --error-main: var(--dark-error-main);
+  --error-contrast: var(--dark-error-contrast);
+}
