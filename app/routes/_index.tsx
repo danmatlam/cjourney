@@ -1,75 +1,57 @@
 import type { MetaFunction } from '@remix-run/node';
-import { BsWindowSidebar } from 'react-icons/bs';
+import SSWrap from '~/ui/SSWrap';
 
 export const meta: MetaFunction = () => {
-    return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
+    return [
+        { title: 'Customer care 🛠️ 🧰 ' },
+        { name: 'description', content: 'Welcome to Remix!' },
+    ];
 };
 
 export default function Index() {
     const titles = [
         {
-            title: 'De Búsqueda a Primera Cita',
+            title: 'From Search to First Appointment 📍',
             description:
-                'Journey que comienza con una búsqueda online ("  *profesión* cerca de mí") hasta completar la primera consulta a través de la aplicación.',
+                'A journey that begins with an online search ("*profession* near me") and leads to booking the first consultation through the app.',
         },
         {
-            title: 'De Primerizo a Cliente Fiel',
+            title: 'From Newcomer to Loyal Customer 💖',
             description:
-                'Proceso de transformación desde la primera consulta hasta convertirse en un cliente recurrente',
+                'The process of transforming from the first consultation to becoming a repeat client.',
         },
         {
-            title: 'Del Contenido a la Consulta',
+            title: 'From Content to Consultation 📲',
             description:
-                'Recorrido desde el descubrimiento a través de redes sociales hasta la reserva de la primera sesión.',
+                'The path from discovering through social media to booking the first session.',
         },
         {
-            title: 'Retorno Sin Fricción',
+            title: 'Frictionless Return 🔁',
             description:
-                'Historia de clientes habituales, recordatorios y proceso de reserva simplificado.',
-        },
-
-        {
-            title: 'Descubrimiento por Recomendación',
-            description: 'Ruta del cliente que llega por referencia de otro paciente.',
+                'The story of regular clients, reminders, and a simplified booking process.',
         },
     ];
 
-    const peerAnimation = ` overflow-hidden transition-all duration-300 ease-in-out peer-checked:w-0 peer-checked:opacity-0 `;
     return (
-        <div className='w-full flex justify-center bg-fore-main'>
-            <input type='checkbox' id='checkbox-sidebar' className='peer hidden' />
-
-            <div
-                className={`frame bg-app-main w-full sm:max-w-[320px] border-r-2 border-fore-main  ${peerAnimation}`}
-            >
-                <div className='bg-app-main h-[60px] border-b-2 border-fore-main'></div>
-                <div className='bg-app-main flex flex-col gap-3 p-3'></div>
-            </div>
-            <div className='frame bg-app-main w-full sm:max-w-[680px] relative'>
-                <div className='bg-app-main h-[60px] border-b-2 border-fore-main'></div>
-                <div className='bg-app-main flex flex-col gap-3 p-3 overflow-y-auto'>
-                    <h1 className='text-s6'>Historias de usuario</h1>
-                    {titles.map((title, index) => (
-                        <div
-                            key={index}
-                            className='min-h-[90px] bg-fore-main p-3 rounded-lg flex gap-3'
-                        >
-                            <span className='text-s3'>{index + 1}</span>
-                            <div>
-                                <h2 className='text-s3'>{title.title}</h2>
-                                <p>{title.description}</p>
-                            </div>
+        <SSWrap>
+            <h1>Hello world</h1>
+            <div className='bg-app-main flex flex-col gap-3 p-3 overflow-y-auto'>
+                <h1 className='text-s6'>Historias de usuario</h1>
+                {titles.map((title, index) => (
+                    <div
+                        key={index}
+                        className='min-h-[90px] bg-fore-main p-3 rounded-lg flex gap-3'
+                    >
+                        <span className='text-s3'>{index + 1}</span>
+                        <div>
+                            <h2 className='text-s3'>{title.title}</h2>
+                            <p>{title.description}</p>
                         </div>
-                    ))}
-                </div>
-
-                <label
-                    htmlFor='checkbox-sidebar'
-                    className='absolute top-0 h-[60px] w-[45px] flex items-center justify-center '
-                >
-                    <BsWindowSidebar size={24} />
-                </label>
+                    </div>
+                ))}
             </div>
-        </div>
+
+            <></>
+        </SSWrap>
     );
 }

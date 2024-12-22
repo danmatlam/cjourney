@@ -1,0 +1,84 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+// Core models
+model User {
+  id                 String      @id @default(cuid())
+  email              String      @unique
+  username           String?     @unique
+  password           String?
+  isEmailVerified    Boolean     @default(false)
+
+  // Authentication
+  lastLoginAt        DateTime?
+  emailVerifiedAt    DateTime?
+  passwordResetToken String?
+  passwordResetExpires DateTime?
+  sessionToken         String?
+
+  // Preferences
+  timezone           String?
+  language           String?     @default("en")
+  notifications      Boolean     @default(true)
+
+  // Plan
+  plan               Plan?       @relation(fields: [planId], references: [id])
+  planId             Int?
+
+
+
+  // Timestamps
+  createdAt          DateTime    @default(now())
+  updatedAt          DateTime    @updatedAt
+  deletedAt          DateTime?
+}
+
+model Plan {
+  id          Int                @id @default(autoincrement())
+  name        String?
+  slug        String?            @unique
+  permissions PermissionOnPlan[]
+  users       User[]
+  initialCoins Int                @default(0)
+
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  deletedAt   DateTime?
+}
+
+model Permission {
+  id          Int                @id @default(autoincrement())
+  name        String?
+  slug        String?            @unique
+  icon        String?
+  order       Int?
+  plans       PermissionOnPlan[]
+
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  deletedAt   DateTime?
+}
+
+model PermissionOnPlan {
+  id           Int        @id @default(autoincrement())
+  permission   Permission @relation(fields: [permissionId], references: [id])
+  permissionId Int
+  plan         Plan       @relation(fields: [planId], references: [id])
+  planId       Int
+
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  deletedAt    DateTime?
+
+  @@unique([permissionId, planId])
+}

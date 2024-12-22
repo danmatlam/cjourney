@@ -6,7 +6,8 @@
         "**/.server/**/*.tsx",
         "**/.client/**/*.ts",
         "**/.client/**/*.tsx",
-        "pallete_script/generator.ts"
+        "pallete_script/generator.ts",
+        "app/supaclient.ts"
     ],
     "compilerOptions": {
         "lib": ["DOM", "DOM.Iterable", "ES2022"],
