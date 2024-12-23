@@ -49,6 +49,7 @@ export default {
         },
     },
     plugins: [],
+    important: true,
 } satisfies Config;
 
 function generateFontSize(fontSize: number): [string, { lineHeight: string }] {

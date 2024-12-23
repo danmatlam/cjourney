@@ -11,15 +11,21 @@
         "typecheck": "tsc"
     },
     "dependencies": {
+        "@hookform/devtools": "^4.3.3",
+        "@hookform/resolvers": "^3.9.1",
         "@prisma/client": "^6.1.0",
         "@remix-run/node": "^2.15.1",
         "@remix-run/react": "^2.15.1",
         "@remix-run/serve": "^2.15.1",
         "@supabase/supabase-js": "^2.47.10",
+        "antd": "^5.22.5",
         "isbot": "^4.1.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-icons": "^5.4.0"
+        "react-hook-form": "^7.54.2",
+        "react-hook-form-antd": "^1.1.2",
+        "react-icons": "^5.4.0",
+        "zod": "^3.24.1"
     },
     "devDependencies": {
         "@remix-run/dev": "^2.15.1",

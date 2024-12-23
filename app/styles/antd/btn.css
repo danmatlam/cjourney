@@ -1,0 +1,90 @@
+/* Ant Design Button Overrides */
+.ant-btn {
+    box-shadow: none !important;
+    /* height: 40px !important; */
+    font-weight: 600 !important;
+}
+
+/* Primary Button */
+.ant-btn-primary {
+    background-color: var(--primary-main) !important;
+    border-color: var(--primary-main) !important;
+    color: var(--primary-contrast) !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus,
+.ant-btn-primary:active {
+    background-color: var(--primary-main) !important;
+    color: var(--primary-contrast) !important;
+}
+
+/* Default Button */
+.ant-btn-default {
+    background-color: var(--fore-main) !important;
+    color: var(--fore-contrast) !important;
+    border-color: var(--fore-main) !important;
+}
+
+.ant-btn-default:hover,
+.ant-btn-default:focus,
+.ant-btn-default:active {
+    background-color: var(--fore-main) !important;
+    color: var(--app-contrast) !important;
+    border-color: var(--app-main) !important;
+}
+
+/* Text Button */
+.ant-btn-text {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--fore-contrast) !important;
+}
+
+.ant-btn-text:hover,
+.ant-btn-text:focus,
+.ant-btn-text:active {
+    background-color: rgba(var(--fore-contrast-rgb), 0.1) !important;
+    color: var(--fore-contrast) !important;
+    border-color: transparent !important;
+}
+
+/* Link Button */
+.ant-btn-link {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: var(--primary-main) !important;
+}
+
+.ant-btn-link:hover,
+.ant-btn-link:focus,
+.ant-btn-link:active {
+    color: color-mix(in srgb, var(--primary-main) 80%, white) !important;
+    border-color: transparent !important;
+}
+
+/* Disabled state for all buttons */
+.ant-btn-disabled,
+.ant-btn-disabled:hover,
+.ant-btn-disabled:focus,
+.ant-btn-disabled:active {
+    background-color: var(--app-main) !important;
+    border-color: var(--fore-main) !important;
+    color: var(--fore-main) !important;
+    opacity: 0.6;
+}
+
+/* dashed Button */
+.ant-btn-dashed {
+    background-color: var(--app-main) !important;
+    color: var(--primary-main) !important;
+    border-color: var(--primary-main) !important;
+}
+
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus,
+.ant-btn-dashed:active {
+    background-color: var(--app-main) !important;
+    color: var(--primary-main) !important;
+    border-color: var(--primary-main) !important;
+}

@@ -1,0 +1,246 @@
+/* Ant Design Input Overrides */
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-number,
+.ant-picker {
+    background-color: var(--fore-main) !important;
+    border-color: var(--fore-main) !important;
+    color: var(--fore-contrast) !important;
+    box-shadow: none !important;
+    border-width: 2;
+    font-size: 18px !important;
+    width: 100% !important;
+}
+
+/*sufix icon on input*/
+.ant-input-suffix {
+    color: var(--fore-contrast) !important;
+}
+.ant-input-password-icon {
+    color: var(--fore-contrast) !important;
+}
+
+/* Specific override for number input */
+
+/* InputNumber specific styles */
+.ant-input-number {
+    border-color: var(--fore-main) !important;
+}
+
+.ant-input-number-input {
+    color: var(--fore-contrast) !important;
+}
+
+.ant-input-number-handler-wrap {
+    background-color: var(--fore-main) !important;
+    border-left-color: var(--fore-contrast) !important;
+}
+
+.ant-input-number-handler {
+    border-top-color: var(--fore-main) !important;
+    border-left-color: var(--fore-main) !important;
+}
+
+.ant-input-number-handler-up-inner,
+.ant-input-number-handler-down-inner {
+    color: var(--fore-contrast) !important;
+}
+
+.ant-input-number:hover .ant-input-number-handler-wrap,
+.ant-input-number-focused .ant-input-number-handler-wrap {
+    border-color: var(--primary-main) !important;
+}
+
+.ant-input-number-handler:hover .ant-input-number-handler-up-inner,
+.ant-input-number-handler:hover .ant-input-number-handler-down-inner {
+    color: var(--primary-main) !important;
+}
+
+/* pickers */
+.ant-picker-panel-container {
+    background-color: var(--app-main) !important;
+    border-radius: 30;
+    overflow: hidden;
+}
+
+.ant-input:hover,
+.ant-input-affix-wrapper:hover,
+.ant-input-number:hover,
+.ant-picker:hover {
+    border-color: var(--primary-main) !important;
+}
+
+.ant-input:focus,
+.ant-input-affix-wrapper-focused,
+.ant-input-number-focused,
+.ant-picker-focused {
+    border-color: var(--primary-main) !important;
+    box-shadow: 0 0 0 2px rgba(var(--primary-main-rgb), 0.2) !important;
+}
+
+/* Input placeholders */
+.ant-input::placeholder,
+.ant-input-number-input::placeholder {
+    color: var(--fore-main) !important;
+    opacity: 0.5;
+}
+
+/* Disabled state for inputs */
+.ant-input-disabled,
+.ant-input-affix-wrapper-disabled,
+.ant-input-number-disabled,
+.ant-picker-disabled {
+    background-color: var(--app-main) !important;
+    border-color: var(--fore-main) !important;
+    color: var(--fore-contrast) !important;
+    opacity: 0.5 !important;
+}
+
+/* TextArea */
+
+/* Select */
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: var(--app-main) !important;
+    border-color: var(--fore-main) !important;
+    color: var(--fore-contrast) !important;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector:hover {
+    border-color: var(--primary-main) !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border-color: var(--primary-main) !important;
+    box-shadow: 0 0 0 2px rgba(var(--primary-main-rgb), 0.2) !important;
+}
+
+/* Dropdown menu for Select */
+.ant-select-dropdown {
+    background-color: var(--app-main) !important;
+    border-color: var(--fore-main) !important;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: rgba(var(--primary-main-rgb), 0.1) !important;
+    color: var(--primary-main) !important;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: rgba(var(--fore-contrast-rgb), 0.05) !important;
+}
+
+/* Label Styling */
+.ant-form-item-label > label {
+    font-size: 1.2em !important;
+    color: var(--fore-contrast) !important;
+}
+
+.ant-form-item-label
+    > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    color: var(--primary-main) !important;
+}
+
+.ant-form-item-explain,
+.ant-form-item-extra {
+    color: var(--fore-main) !important;
+}
+
+.ant-form-item-has-error .ant-form-item-explain,
+.ant-form-item-has-error .ant-form-item-split {
+    color: var(--error-color, #ff4d4f) !important;
+}
+
+/* Previous styles remain unchanged */
+
+/* DatePicker Calendar Styling */
+.ant-picker-dropdown {
+    background-color: var(--app-main) !important;
+    border-color: var(--fore-main) !important;
+}
+
+.ant-picker-panel {
+    background-color: var(--app-main) !important;
+}
+
+.ant-picker-header {
+    color: var(--fore-contrast) !important;
+    border-bottom-color: var(--fore-main) !important;
+}
+
+.ant-picker-header button {
+    color: var(--fore-contrast) !important;
+}
+
+.ant-picker-content th {
+    color: var(--fore-main) !important;
+}
+
+.ant-picker-cell {
+    color: var(--fore-contrast) !important;
+}
+
+.ant-picker-cell-in-view {
+    color: var(--fore-contrast) !important;
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(
+        .ant-picker-cell-range-end
+    ):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+    .ant-picker-cell-inner {
+    background-color: rgba(var(--primary-main-rgb), 0.1) !important;
+}
+
+.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-range-end .ant-picker-cell-inner {
+    background-color: var(--primary-main) !important;
+    color: var(--primary-contrast) !important;
+}
+
+.ant-picker-today-btn {
+    color: var(--primary-main) !important;
+}
+
+.ant-picker-ranges {
+    border-top-color: var(--fore-main) !important;
+}
+
+.ant-picker-now {
+    color: var(--primary-main) !important;
+}
+
+.ant-picker-ok button {
+    background-color: var(--primary-main) !important;
+    border-color: var(--primary-main) !important;
+    color: var(--primary-contrast) !important;
+}
+
+/* Input placeholders */
+.ant-input::placeholder,
+.ant-input-number-input::placeholder {
+    color: var(--fore-contrast) !important;
+
+    opacity: 0.5;
+}
+
+.ant-input-textarea {
+    background-color: var(--app-main) !important;
+}
+textarea.ant-input::placeholder {
+    color: var(--fore-contrast) !important;
+    opacity: 0.72 !important;
+    /* font-weight: 500 !important; */
+    padding: 0 !important;
+}
+
+textarea.ant-input {
+    /* padding: 0 !important;
+  caret-color: var(--primary-main) !important;
+  font-size: 3em; */
+}
+
+.ant-checkbox-wrapper {
+    color: var(--fore-contrast) !important;
+}

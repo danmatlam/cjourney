@@ -1,0 +1,30 @@
+@import './vars.css';
+@import './viewport.css';
+@import './antd/input.css';
+@import './antd/btn.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    background-color: var(--fore-main) !important;
+    color: var(--app-contrast);
+    font-family: 'Poppins', serif;
+    overflow: hidden;
+    height: 100%; /* Prevents page height from extending beyond the viewport */
+}
+
+.text-s2,
+.text-s3,
+.text-s4,
+.text-s5,
+.text-s6 {
+    /* font-weight: 800 !important; */
+    /* display: inline-flex !important; */
+    /* align-items: center !important; */
+    color: var(--fore-contrast);
+
+    font-weight: 500;
+}

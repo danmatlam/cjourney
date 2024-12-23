@@ -3,7 +3,9 @@
     min-height: 100dvh;
     max-height: 100dvh;
     grid-template-rows: auto 1fr auto;
-    overflow-y: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 /* Base Custom Scrollbar Styles */

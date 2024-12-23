@@ -1,57 +1,28 @@
 import type { MetaFunction } from '@remix-run/node';
-import SSWrap from '~/ui/SSWrap';
+import Pitch from '~/components/ui/appname/Pitch';
+import Stories from '~/components/core/user/Stories';
+import SSWrap from '~/components/ui/wraps/SSWrap';
+import GButton from '~/components/ui/buttons/GButton';
 
 export const meta: MetaFunction = () => {
-    return [
-        { title: 'Customer care 🛠️ 🧰 ' },
-        { name: 'description', content: 'Welcome to Remix!' },
-    ];
+    return [{ title: 'First tasks' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {
-    const titles = [
-        {
-            title: 'From Search to First Appointment 📍',
-            description:
-                'A journey that begins with an online search ("*profession* near me") and leads to booking the first consultation through the app.',
-        },
-        {
-            title: 'From Newcomer to Loyal Customer 💖',
-            description:
-                'The process of transforming from the first consultation to becoming a repeat client.',
-        },
-        {
-            title: 'From Content to Consultation 📲',
-            description:
-                'The path from discovering through social media to booking the first session.',
-        },
-        {
-            title: 'Frictionless Return 🔁',
-            description:
-                'The story of regular clients, reminders, and a simplified booking process.',
-        },
-    ];
-
     return (
-        <SSWrap>
-            <h1>Hello world</h1>
-            <div className='bg-app-main flex flex-col gap-3 p-3 overflow-y-auto'>
-                <h1 className='text-s6'>Historias de usuario</h1>
-                {titles.map((title, index) => (
-                    <div
-                        key={index}
-                        className='min-h-[90px] bg-fore-main p-3 rounded-lg flex gap-3'
-                    >
-                        <span className='text-s3'>{index + 1}</span>
-                        <div>
-                            <h2 className='text-s3'>{title.title}</h2>
-                            <p>{title.description}</p>
-                        </div>
-                    </div>
-                ))}
+        <SSWrap drawerTrigger=' About'>
+            <div>
+                <Pitch start='Digital' middle='Toolkit for Therapists and Counselors' />
+                <div className='p-3 pb-12'>
+                    <Stories />
+                </div>
+                <div className=' absolute bottom-0 left-0 right-0 p-3'>
+                    <GButton href='/register' size='large'>
+                        Start now 🚀
+                    </GButton>
+                </div>
             </div>
-
-            <></>
+            <div className='flex flex-col h-full justify-end pb-4 px-2 absolute w-full'></div>
         </SSWrap>
     );
 }
