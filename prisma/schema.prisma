@@ -11,6 +11,8 @@ datasource db {
 
 
 
+
+
 // Core models
 model User {
   id                 String      @id @default(cuid())
@@ -41,7 +43,24 @@ model User {
   createdAt          DateTime    @default(now())
   updatedAt          DateTime    @updatedAt
   deletedAt          DateTime?
+
+
+ // Profile relation
+  profile            Profile?
 }
+
+
+
+model Profile {
+  id                String      @id @default(cuid())
+  firstName         String?
+  lastName          String?
+  
+  // User relation
+  user              User        @relation(fields: [userId], references: [id])
+  userId            String      @unique
+}
+
 
 model Plan {
   id          Int                @id @default(autoincrement())

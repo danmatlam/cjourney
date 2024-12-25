@@ -21,17 +21,17 @@
 
 /* Default Button */
 .ant-btn-default {
-    background-color: var(--fore-main) !important;
+    background-color: var(--app-main) !important;
     color: var(--fore-contrast) !important;
-    border-color: var(--fore-main) !important;
+    border-color: var(--app-contrast) !important;
 }
 
 .ant-btn-default:hover,
 .ant-btn-default:focus,
 .ant-btn-default:active {
-    background-color: var(--fore-main) !important;
-    color: var(--app-contrast) !important;
-    border-color: var(--app-main) !important;
+    background-color: var(--app-main) !important;
+    color: var(--fore-contrast) !important;
+    border-color: var(--app-contrast) !important;
 }
 
 /* Text Button */

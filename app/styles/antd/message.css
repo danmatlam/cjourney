@@ -1,0 +1,18 @@
+.ant-message-notice-content {
+    background-color: var(--app-main) !important;
+    color: var(--fore-contrast) !important;
+    border: 1pt solid var(--primary-main);
+}
+.ant-message-success .anticon svg {
+    color: var(--primary-main) !important;
+    fill: var(--primary-main) !important;
+}
+
+.ant-message-error .anticon svg {
+    color: var(--primary-main) !important;
+    fill: var(--primary-main) !important;
+}
+.ant-message-info .anticon svg {
+    color: var(--primary-main) !important;
+    fill: var(--primary-main) !important;
+}

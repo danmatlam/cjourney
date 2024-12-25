@@ -1,6 +1,5 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import type { LinksFunction } from '@remix-run/node';
-
 import './styles/global.css';
 
 export const links: LinksFunction = () => [
@@ -25,6 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Meta />
                 <Links />
             </head>
+
             <body>
                 {children}
                 <ScrollRestoration />

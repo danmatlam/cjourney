@@ -2,6 +2,7 @@
 @import './viewport.css';
 @import './antd/input.css';
 @import './antd/btn.css';
+@import './antd/message.css';
 
 @tailwind base;
 @tailwind components;
@@ -12,8 +13,8 @@ body {
     background-color: var(--fore-main) !important;
     color: var(--app-contrast);
     font-family: 'Poppins', serif;
-    overflow: hidden;
-    height: 100%; /* Prevents page height from extending beyond the viewport */
+    /* overflow: hidden;
+    height: 100%;  */
 }
 
 .text-s2,

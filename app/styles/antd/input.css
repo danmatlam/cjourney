@@ -244,3 +244,14 @@ textarea.ant-input {
 .ant-checkbox-wrapper {
     color: var(--fore-contrast) !important;
 }
+.ant-checkbox .ant-checkbox-inner {
+    background-color: var(--fore-main) !important; /* Replace with your desired color */
+    border-color: var(--primary-main) !important;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--primary-main) !important;
+    border-color: var(--primary-main) !important;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+    border-color: var(--primary-contrast) !important; /* Set your desired tick color */
+}

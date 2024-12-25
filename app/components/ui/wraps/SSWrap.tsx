@@ -22,9 +22,12 @@ const SSWrap: React.FC<Props> = ({ title, children, drawerTrigger }) => {
                 <input type='checkbox' id='checkbox-sidebar' className='peer hidden' />
 
                 <div className='frame w-full  sm:max-w-[680px] flex sm:py-3 relative '>
-                    <div className='bg-app-main h-full sm:rounded-lg relative overflow-hidden w-full'>
+                    <div className='bg-app-main h-full sm:rounded-lg relative overflow-hidden w-full flex flex-col'>
                         <AppBar title={title} />
-                        <div className='flex flex-col gap-3 overflow-y-auto h-full'>{main}</div>
+                        <div className='overflow-y-auto h-full '>
+                            {main}
+                            {/* <span className=' absolute bottom-0  font-bold'>foot</span> */}
+                        </div>
                         <label
                             htmlFor='checkbox-sidebar'
                             className='absolute top-0 right-0 h-[60px]  items-center justify-center cursor-pointer hidden sm:flex px-2'

@@ -1,15 +1,16 @@
 interface Props {
     start: string;
     middle: string;
+    className?: string;
 }
-const Pitch = ({ start, middle }: Props) => {
+const Pitch = ({ start, middle, className }: Props) => {
     return (
-        <div className='flex flex-col justify-center   w-full    text-center  p-9'>
-            <h1 className='text-[27px] sm:text-[36px] tracking-tighter font-semibold '>
-                {start}
+        <div className={`flex flex-col text-center text-s3 ${className}`}>
+            <h1 className='tracking-tighter font-semibold '>
                 <span className='bg-gradient-to-r from-primary-main via-blue-500 to-red-400 text-transparent bg-clip-text'>
-                    {` ${middle} `}
+                    {start}
                 </span>
+                <span className=''>{` ${middle} `}</span>
             </h1>
         </div>
     );
